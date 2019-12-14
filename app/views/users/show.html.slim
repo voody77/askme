@@ -1,2 +1,7 @@
-h1
-  = @hello
+h1 = @user.name
+
+img = image_tag user_avatar(@user), alt: '[avatar]'
+
+h2 @ #{@user.username}
+
+a.button.button-green href='#' Задать вопрос
