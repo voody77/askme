@@ -9,8 +9,9 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .header
-      .header-logo
-        h1.header-title = link_to "Хорошие вопросы", root_path
+      .container
+        .header-logo
+          h1.header-title = link_to "Хорошие вопросы", root_path
     .content
       .container
         = yield

@@ -1,2 +1,7 @@
-h1 Users#index
-p Find me in app/views/users/index.html.slim
+.content-wrapper.buffer-both.text-center
+  .buffer-both
+    h1.title-medium Наши пользователи
+  - @users.each do |user|
+    .users-list-item
+      .user-image-div.user-image-div-small
+        = link_to image_tag(user_avatar(user), class: 'user-image'), user_path(user)
