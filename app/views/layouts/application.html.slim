@@ -14,4 +14,8 @@ html
           h1.header-title = link_to "Хорошие вопросы", root_path
     .content
       .container
+        - if flash.any?
+          .content-wrapper.buffer-both
+            - flash.each do |name, message|
+              = content_tag :div, message, class: "flash-#{name}"
         = yield
