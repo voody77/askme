@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def pluralize(number, one, few, many)
-    return many if number%100 >= 11 && number%100 <= 14
+    return many if number % 100 >= 11 && number % 100 <= 14
 
     case number % 10
     when 1 then one
