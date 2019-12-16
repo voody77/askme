@@ -72,7 +72,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .column-1-3 {
     float: none;
     width: auto;

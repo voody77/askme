@@ -1,4 +1,4 @@
-.user-header.text-center
+.user-header.text-center style="background: #{@user.bgcolor}"
   h1.text-medium = @user.name
   .buffer-both
     = link_to 'Редактировать профиль', edit_user_path(@user) if current_user == @user
