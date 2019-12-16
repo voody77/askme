@@ -60,7 +60,6 @@ GEM
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.4)
-    byebug (11.0.1)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
@@ -198,7 +197,6 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
-  byebug
   html2slim
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
@@ -212,7 +210,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tzinfo-data
   valid_email2
   web-console (>= 3.3.0)
   webpacker (~> 4.0)

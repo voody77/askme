@@ -1,3 +1,6 @@
+- question ||= nil
+- action_icon = question.answer.blank? ? 'reply' : 'pencil-alt'
+
 .question
   .question-content
     .question-text.text-lead
@@ -6,4 +9,8 @@
       .question-answer.text-lead
         = question.answer if question.answer.present?
     .question-date
-      = question.created_at.strftime('%d %b %M:%H')
+      = l(question.created_at, format: :short)
+  - if question.user == current_user
+    .question-actions
+      = link_to fa_icon(action_icon), edit_question_path(question)
+      = link_to fa_icon('trash-alt'), question_path(question), method: :delete, data: {confirm: 'Удалаить вопрос?'}

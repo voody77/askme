@@ -3,7 +3,7 @@
   .buffer-both
     = link_to 'Редактировать профиль', edit_user_path(@user) if current_user == @user
   .user-image-div = image_tag user_avatar(@user), class: 'user-image', alt: '[avatar]'
-  h2.title-small.buffer-both @ #{@user.username}
+  h2.title-small.buffer-both  @#{@user.username}
   .user-header
     .user-details
       .user-ask-button.container.text-center
@@ -13,7 +13,15 @@
           .column-1-3
             p 
               strong Всего:
-            p #{@questions.count} #{pluralize(@questions.count, 'вопрос', 'вопроса', 'вопросов')}
+            p #{question_pluralize(@questions.count)}
+          .column-1-3
+            p
+              strong Отвеченных:
+            p #{question_pluralize(@questions.where.not(answer: nil).count)}
+          .column-1-3
+            p
+              strong Не отвеченных:
+            p #{question_pluralize(@questions.where(:answer.blank?).count)}
 .user-question-form-div.column-1-4.column-1-4-right id='ask-form'
   .user-question-form.buffer-both
     .form
