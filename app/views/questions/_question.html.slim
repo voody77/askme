@@ -10,6 +10,8 @@
         = question.answer if question.answer.present?
     .question-date
       = l(question.created_at, format: :short)
+      ',
+      ' author: @#{author(question)}
   - if question.user == current_user
     .question-actions
       = link_to fa_icon(action_icon), edit_question_path(question)
