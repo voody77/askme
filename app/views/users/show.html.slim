@@ -35,6 +35,5 @@
           
 .column-3-4
   .user-questions.buffer-both
-    .questions-list
-      - @questions.each do |question|
-        = render partial: 'questions/question', object: question
+    - @questions.each do |question|
+      = render partial: 'questions/question', object: question
