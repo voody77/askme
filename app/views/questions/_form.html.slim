@@ -16,5 +16,5 @@
         = f.text_area :answer, class: 'form-text-area'
     .form-action.buffer-both
       = f.submit 'Сохранить', class: 'button button-dark button-small'
-      | или
+      ' или
       =  link_to 'Вернуться', user_path(@question.user)
