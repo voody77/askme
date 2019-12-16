@@ -15,7 +15,7 @@ class User < ApplicationRecord
     message: "only allows letters, numbers or _"
   }
   validates :password, presence: true, on: :create, confirmation: true
-  validates :bgcolor, format: { with: /\A#[\h]{6}\z/ }, allow_nil: true
+  validates :bgcolor, format: { with: /\A#[\h]{6}\z/ }, allow_nil: true, on: :update
 
   before_validation :downcase!
   before_save :encrypt_password

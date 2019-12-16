@@ -44,7 +44,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy if current_user.present?
+    @user.destroy
+    #if current_user.present?
     session[:user_id] = nil
     redirect_to root_url, notice: "Ваш профиль успешно удален"
   end
