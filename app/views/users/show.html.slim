@@ -13,15 +13,15 @@
           .column-1-3
             p 
               strong Всего:
-            p #{question_pluralize(@questions.count)}
+            p #{question_pluralize(@questions_count)}
           .column-1-3
             p
               strong Отвеченных:
-            p #{question_pluralize(@questions.where.not(answer: nil).count)}
+            p #{question_pluralize(@answers_count)}
           .column-1-3
             p
               strong Не отвеченных:
-            p #{question_pluralize(@questions.where(:answer.blank?).count)}
+            p #{question_pluralize(@unanswered_count)}
 .user-question-form-div.column-1-4.column-1-4-right id='ask-form'
   .user-question-form.buffer-both
     .form
