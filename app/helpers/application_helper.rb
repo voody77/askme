@@ -36,7 +36,7 @@ module ApplicationHelper
 
   def author(question)
     if question.author.present?
-      link_to question.author.username, user_url(question.author)
+      link_to_unless_current(question.author.username, user_path(question.author))
     else
       'anonymous'
     end
