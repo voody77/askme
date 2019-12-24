@@ -15,4 +15,4 @@
   - if question.user == current_user
     .question-actions
       = link_to fa_icon(action_icon), edit_question_path(question)
-      = link_to fa_icon('trash-alt'), question_path(question), method: :delete, data: {confirm: 'Удалаить вопрос?'}
+      = link_to fa_icon('trash-alt'), question_path(question), method: :delete, data: {confirm: 'Удалить вопрос?'}
